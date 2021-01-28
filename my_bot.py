@@ -40,9 +40,10 @@ class MyBot:
 			#_____assigning initial roles______
 			# role = guild.get_role(ROLE_ID)
 			# await member.add_roles(role)
-
-			await welcome_channel.send(f'{welcome_data} {member.mention} ! :partying_face:') #channel welcome message
-			await member.send(f'{welcome_data} {member.mention} ! :partying_face:') #pm welcome message
+			
+			if not member.bot:
+				await welcome_channel.send(f'{welcome_data} {member.mention} ! :partying_face:') #channel welcome message
+				await member.send(f'{welcome_data} {member.mention} ! :partying_face:') #pm welcome message
 
 	#message response section		
 		# @client.event
