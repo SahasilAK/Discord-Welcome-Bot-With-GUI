@@ -2,6 +2,7 @@ import discord
 import os
 from keep_alive import keep_alive
 import json
+# from my_token import token
 
 
 SERVER_ID = 'Your server id'
@@ -56,3 +57,4 @@ class MyBot:
 
 		keep_alive()
 		client.run(os.getenv('TOKEN'))
+# 		client.run(token)
